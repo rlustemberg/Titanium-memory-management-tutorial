@@ -1,5 +1,16 @@
 <Alloy>
-	<Window class="container">
-		<Label id="label" onClick="doClick">Hello, World</Label>
-	</Window>
+	<TabGroup>
+		<Tab title="Tab 1">
+			<Require src="/window1"></Require>
+		</Tab>
+		<Tab title="Tab 2">
+			<Require src="/window2"></Require>
+		</Tab>
+		<Tab title="Tab 3">
+			<Require src="/window3"></Require>
+		</Tab>
+		<Tab title="Tab 4">
+			<Require src="/window4"></Require>
+		</Tab>
+	</TabGroup>
 </Alloy>
