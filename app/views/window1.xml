@@ -1,5 +1,8 @@
 <Alloy>
-	<Window id="window">
-		<Button onClick="openGallery">Open Gallery</Button>
+	<Window id="window" layout="vertical">
+		<Button top="200" id="ex1" onClick="openGallery">Open Gallery 1</Button>
+		<Button top="100" id="ex2" onClick="openGallery">Open Gallery 2</Button>
+		<Button top="100" id="ex3" onClick="openGallery">Open Gallery 3</Button>
+		<Button top="100" id="ex4" onClick="openGallery">Open Gallery 4</Button>
 	</Window>
 </Alloy>

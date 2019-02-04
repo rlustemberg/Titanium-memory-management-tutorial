@@ -12,6 +12,8 @@ function setImages(image) {
                 '\nmedia.mimeType: ' + compressedBlob.mimeType +
                 '\nmedia.nativePath: ' + compressedBlob.nativePath);
     $[`image${index}`].image = compressedBlob;
-    compressedBlob = null;
   });
+}
+
+function cleanup(e) {
 }

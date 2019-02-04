@@ -1,0 +1,7 @@
+<Alloy>
+	<Window id="window" layout="vertical" onClose="cleanup">
+		<ImageView id="image0" height="33%"></ImageView>
+		<ImageView id="image1" height="33%"></ImageView>
+		<ImageView id="image2" height="33%"></ImageView>
+	</Window>
+</Alloy>

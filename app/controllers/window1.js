@@ -1,7 +1,7 @@
 // Arguments passed into this controller can be accessed via the `$.args` object directly or:
 var args = $.args;
 
-function openGallery(e) {
+function openGallery(buttonEvt) {
   Ti.Media.openPhotoGallery({
     mediaTypes : [ Titanium.Media.MEDIA_TYPE_PHOTO ],
     success : function(e) {
@@ -9,14 +9,15 @@ function openGallery(e) {
                   '\nmedia.length: ' + e.media.length + '\nmedia.mimeType: ' + e.media.mimeType +
                   '\nmedia.nativePath: ' + e.media.nativePath);
 
-      openDetail(e.media);
+      openDetail(buttonEvt.source.id, e.media);
     },
     error : function(e) {
       alert('error opening image: ' + e);
     }
   });
 }
-function openDetail(blob) {
+function openDetail(id, blob) {
+  const controllerPrefix = '/imageDetails';
   Alloy.Globals.TabGroup.activeTab.open(
-      Alloy.createController('/imageDetails', {image : blob}).getView());
+      Alloy.createController(`${controllerPrefix}${id.slice(-1)}`, {image : blob}).getView());
 }
